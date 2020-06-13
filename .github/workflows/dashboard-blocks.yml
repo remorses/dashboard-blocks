@@ -1,0 +1,32 @@
+name: dashboard-blocks Npm Package
+
+on:
+  push:
+    branches:
+      - master
+    # paths:
+    #   - dashboard-blocks/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 13
+          registry-url: https://registry.npmjs.org/
+      - run: cd dashboard-blocks && yarn
+      # - run: yarn test
+      - run: cd dashboard-blocks && yarn build
+      - name: Bump version
+        uses: remorses/bump-version@js
+        with:
+          version_file: dashboard-blocks/VERSION
+          prefix: dashboard-blocks
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: cd dashboard-blocks && yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
