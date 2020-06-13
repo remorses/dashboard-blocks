@@ -1,0 +1,10 @@
+{
+    "private": true,
+    "workspaces": [
+        "landing-blocks",
+        "website"
+    ],
+    "scripts": {
+        "dev": "yarn --cwd website dev"
+    }
+}
