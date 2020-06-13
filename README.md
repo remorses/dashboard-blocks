@@ -18,28 +18,37 @@
 yarn add dashboard-blocks @emotion/core @chakra-ui/core
 ```
 
+Features
+
+-   Dark mode
+-   No global css dependency (only css in js with emotion)
+-   Easiest thing ever
+-   Pretty by default
+
 ## Todo
 
 Dashboard blocks
 
-### Side nav
+## Dashboard Layout
 
-Stack of links that is rendered as a select on mobile
+Layout with sidebar to easily create a dashboard skeleton, children are rendered side to the nav links.
+The side nav is rendered as a select when in mobile view.
 
 ### Block
 
-A container to contain a graph, a stat, a table, can have a title (can be an outer title)
-Manages the space around and has a cool shadow,
+A container for a graph, a stat, a table, can have a title (can be an outer title)
+Manages the space around and has a cool shadow or border
 
 ### Table
 
 Display elements inside a table with a top header
-Manages treating its children,
+Manages truncating its children,
 Has a load more button,
 
-### Graph
+### Chart
 
-Display a graph with good defaults, depends on apex charts
+Display a graph with good defaults (depends on apex charts).
+Has a select to choose the time domain.
 
 ### Breadcrumbs
 
