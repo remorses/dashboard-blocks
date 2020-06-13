@@ -1,7 +1,7 @@
 {
     "private": true,
     "workspaces": [
-        "landing-blocks",
+        "dashboard-blocks",
         "website"
     ],
     "scripts": {

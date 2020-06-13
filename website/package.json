@@ -1,5 +1,5 @@
 {
-    "name": "example",
+    "name": "website",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -8,12 +8,15 @@
         "start": "next start"
     },
     "dependencies": {
-        "@chakra-ui/core": "0.x",
+        "@chakra-ui/core": "^0.8.0",
         "@emotion/core": "^10.0.28",
         "@emotion/styled": "^10.0.27",
         "dokz": "latest",
+        "emotion-theming": "^10.0.27",
         "next": "latest",
+        "next-transpile-modules": "^3.3.0",
         "react": "16.13.1",
+        "dashboard-blocks": "*",
         "react-dom": "16.13.1"
     },
     "devDependencies": {
