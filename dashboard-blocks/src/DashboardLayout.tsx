@@ -65,7 +65,7 @@ export function DashboardLayout({
             <CSSReset />
             <Stack
                 // bg='gray.100'
-                minHeight='100%'
+                // minHeight='100%'
                 align='center'
                 // color={bodyColor[colorMode]}
                 // fontSize={fontSize}
@@ -76,15 +76,14 @@ export function DashboardLayout({
             >
                 <Stack
                     direction='row'
-                    minHeight='100%'
+                    // minHeight='100%'
                     position='relative'
-
                     w='100%'
                     maxWidth={pageWidth}
                     // px='20px' // TODO add px as landing blocks
                 >
                     <SideNav
-                        minHeight='100%'
+                        h='100%'
                         // maxW='200px'
                         items={sideNavItems}
                         alignSelf='flex-start'
@@ -98,7 +97,7 @@ export function DashboardLayout({
                     <Stack
                         w='100%'
                         direction='row'
-                        minHeight='100%'
+                        h='100%'
                         // ml={['none', null, SIDENAV_W + 10]}
                         // mr={['none', null, TABLE_OF_C_W + 30 + 'px']}
                     >
