@@ -64,6 +64,7 @@ export function DashboardLayout({
             <Global styles={globalStyles} />
             <CSSReset />
             <Stack
+                minHeight='100%'
                 align='center'
                 // color={bodyColor[colorMode]}
                 // fontSize={fontSize}
@@ -72,14 +73,20 @@ export function DashboardLayout({
                 // color={colorMode == 'dark' ? 'white' : black}
                 {...rest}
             >
-                <Box position='relative' w='100%' maxWidth={pageWidth}>
+                <Box
+                    minHeight='100%'
+                    position='relative'
+                    w='100%'
+                    maxWidth={pageWidth}
+                    px='20px'
+                >
                     <SideNav
+                        minHeight='100%'
                         maxW='200px'
                         items={sideNavItems}
                         alignSelf='flex-start'
                         position='fixed'
                         // left={0}
-                        height='100%'
                         width={SIDENAV_W}
                         display={['none', null, 'block']}
                         overflowY='auto'
@@ -87,6 +94,7 @@ export function DashboardLayout({
                     />
                     <Stack
                         direction='row'
+                        minHeight='100%'
                         ml={['none', null, SIDENAV_W]}
                         // mr={['none', null, TABLE_OF_C_W + 30 + 'px']}
                     >
@@ -94,7 +102,8 @@ export function DashboardLayout({
                             overflow='auto'
                             px={['10px', null, '20px', '30px']}
                             flex='1'
-                            minW='0'
+                            minHeight='100%'
+                            minW='100%'
                         >
                             {children}
                         </Stack>
@@ -121,10 +130,16 @@ const globalStyles = css`
     }
     html {
         overflow: hidden;
+        min-height: 100%;
         height: 100%;
         scroll-behavior: smooth;
     }
+    #__next {
+        min-height: 100%;
+        height: 100%;
+    }
     body {
+        min-height: 100%;
         height: 100%;
         overflow: auto;
         overflow-x: hidden;
@@ -133,4 +148,19 @@ const globalStyles = css`
         -moz-osx-font-smoothing: grayscale;
         text-rendering: optimizeLegibility;
     }
+    /* 
+    html,
+    body {
+        margin: 0;
+
+        padding: 0;
+
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+
+        min-height: 100%;
+        height: 100%;
+        max-height: 100%;
+    } */
 `

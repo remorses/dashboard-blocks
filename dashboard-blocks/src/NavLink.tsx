@@ -33,6 +33,7 @@ export const NavLink: FC<NavLinkProps> = forwardRef(
         return (
             <Link
                 ref={ref}
+                fontWeight='medium'
                 as='a'
                 mx={-2}
                 display='flex'
