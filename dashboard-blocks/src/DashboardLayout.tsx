@@ -37,7 +37,7 @@ export interface ThemeExtension extends ITheme {
     } & ITheme['fontSizes']
 }
 
-const SIDENAV_W = 200
+const SIDENAV_W = 260
 
 export function DashboardLayout({
     sideNavItems,
@@ -74,19 +74,21 @@ export function DashboardLayout({
                 // color={colorMode == 'dark' ? 'white' : black}
                 {...rest}
             >
-                <Box
+                <Stack
+                    direction='row'
                     minHeight='100%'
                     position='relative'
+
                     w='100%'
                     maxWidth={pageWidth}
                     // px='20px' // TODO add px as landing blocks
                 >
                     <SideNav
                         minHeight='100%'
-                        maxW='200px'
+                        // maxW='200px'
                         items={sideNavItems}
                         alignSelf='flex-start'
-                        position='fixed'
+                        // position='fixed'
                         // left={0}
                         width={SIDENAV_W}
                         display={['none', null, 'block']}
@@ -94,9 +96,10 @@ export function DashboardLayout({
                         overflowX='hidden'
                     />
                     <Stack
+                        w='100%'
                         direction='row'
                         minHeight='100%'
-                        ml={['none', null, SIDENAV_W + 10]}
+                        // ml={['none', null, SIDENAV_W + 10]}
                         // mr={['none', null, TABLE_OF_C_W + 30 + 'px']}
                     >
                         <Stack
@@ -109,7 +112,7 @@ export function DashboardLayout({
                             {children}
                         </Stack>
                     </Stack>
-                </Box>
+                </Stack>
             </Stack>
         </PropagatedThemeProvider>
     )
