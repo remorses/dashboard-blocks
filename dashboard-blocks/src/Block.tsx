@@ -15,10 +15,11 @@ import {
     Stack,
 } from '@chakra-ui/core'
 
-export const Block = ({ children, ...rest }) => {
+export const Block = ({ children, heading = '', ...rest }) => {
     return (
         <Stack
             m='10px'
+            mt='0px'
             overflow='hidden'
             rounded='6px'
             bg='white'
@@ -28,6 +29,9 @@ export const Block = ({ children, ...rest }) => {
             p='20px'
             {...rest}
         >
+            <Box opacity={1} minH='2em' fontWeight='medium' w='100%' isTruncated>
+                {heading}
+            </Box>
             {children}
         </Stack>
     )

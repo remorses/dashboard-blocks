@@ -1,4 +1,5 @@
 import Stack from '@chakra-ui/core/dist/Stack'
+import {FiActivity, FiAlertOctagon} from 'react-icons/fi'
 import {
     DashboardLayout,
     SideNavLink,
@@ -21,7 +22,7 @@ export default function Page({}) {
         },
     }
     return (
-        <LandingProvider>
+        <LandingProvider bg='gray.100'>
             <NavBar
                 logo={
                     <Box fontSize='30px' fontWeight='medium'>
@@ -38,13 +39,19 @@ export default function Page({}) {
                 // pt='40px'
 
                 sideNavItems={addKeys([
-                    <SideNavLink href='/demo'>User</SideNavLink>,
-                    <SideNavLink href=''>Projects</SideNavLink>,
-                    <SideNavLink href=''>Settings</SideNavLink>,
+                    <SideNavLink icon={<FiAlertOctagon />} href='/demo'>
+                        User
+                    </SideNavLink>,
+                    <SideNavLink icon={<FiActivity/>} href=''>
+                        Projects
+                    </SideNavLink>,
+                    <SideNavLink icon={<FiAlertOctagon/>} href=''>
+                        Settings
+                    </SideNavLink>,
                 ])}
             >
                 <Flex w='100%' direction='row'>
-                    <Block w='100%'>
+                    <Block heading='Chart of something' w='100%'>
                         <Chart
                             options={chartOptions}
                             series={[{ data, name: '' }]}

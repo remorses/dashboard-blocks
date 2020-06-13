@@ -6,7 +6,15 @@ import React, {
     FC,
     ReactNode,
 } from 'react'
-import { useColorMode, PseudoBox, Box, LinkProps, Link } from '@chakra-ui/core'
+import {
+    useColorMode,
+    PseudoBox,
+    Box,
+    LinkProps,
+    Link,
+    Stack,
+    Flex,
+} from '@chakra-ui/core'
 
 const useIsActive = (href) => {
     const [isActive, setIsActive] = useState(false)
@@ -31,11 +39,12 @@ export const NavLink: FC<NavLinkProps> = forwardRef(
         const { colorMode } = useColorMode()
         const color = { light: 'gray.700', dark: 'whiteAlpha.700' }
         return (
-            <Link
+            <Stack
                 ref={ref}
                 fontWeight='medium'
                 as='a'
-                mx={-2}
+                direction='row'
+                // mx={-2}
                 display='flex'
                 cursor='pointer'
                 alignItems='center'
@@ -46,12 +55,16 @@ export const NavLink: FC<NavLinkProps> = forwardRef(
                 outline='none'
                 _focus={{ shadow: 'outline' }}
                 // color={color[colorMode]}
-                _notFirst={{ mt: 1 }}
+                // _notFirst={{ mt: 1 }}
                 {...props}
             >
-                {icon && cloneElement(icon, { mr: 3 })}
+                {icon && (
+                    <Flex align='center' justify='center' w='2em' h='1.6em'>
+                        {icon}
+                    </Flex>
+                )}
                 <Box>{children}</Box>
-            </Link>
+            </Stack>
         )
     },
 )
