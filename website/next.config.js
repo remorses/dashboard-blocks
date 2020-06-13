@@ -1,5 +1,5 @@
 const compose = require('compose-function')
-const transpile = require('next-transpile-modules')(['dashboard-blocks'])
+const transpile = require('next-transpile-modules')(['dashboard-blocks', 'landing-blocks'])
 const { withDokz } = require('dokz/dist/plugin')
 
 const composed = compose(transpile, withDokz)
