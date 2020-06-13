@@ -1,7 +1,7 @@
 <div align='center'>
   <br/>
     <br/>
-    <img src='https://landing-blocks.now.sh/logo_black.svg' width='400px' />
+    <img src='https://landing-blocks.now.sh/logo_icon_black.svg' width='200px' />
     <br/>
     <h3>Dashboards building blocks</h3>
     <!-- <a href='https://dashboard-blocks.now.sh#demos'>See some landing pages built with <code>dashboard-blocks</code></a> -->
