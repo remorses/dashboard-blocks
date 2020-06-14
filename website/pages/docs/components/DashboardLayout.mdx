@@ -2,12 +2,19 @@
 
 import { Playground } from 'dokz'
 import { Stack } from '@chakra-ui/core'
-import { DashboardLayout, Block, SideNavLink, TableBlock } from 'dashboard-blocks/src'
+import {
+    DashboardLayout,
+    Block,
+    SideNavLink,
+    TableBlock,
+    Breadcrumbs,
+} from 'dashboard-blocks/src'
 
 <Playground iframe>
     <DashboardLayout
         bg='gray.50'
         p='20px'
+        pb='100px'
         sideNavItems={[
             <SideNavLink href='/docs/components/DashboardLayout'>
                 User
@@ -16,7 +23,8 @@ import { DashboardLayout, Block, SideNavLink, TableBlock } from 'dashboard-block
             <SideNavLink href=''>Settings</SideNavLink>,
         ]}
     >
-        <Stack direction='row'>
+        <Breadcrumbs fontSize='16px' items={['User', 'Morse', 'Services']} />
+        <Stack spacing='6' direction='row'>
             <Block w='100%' />
             <Block w='100%' />
         </Stack>
@@ -24,14 +32,11 @@ import { DashboardLayout, Block, SideNavLink, TableBlock } from 'dashboard-block
             fontSize='16px'
             head={['Name', 'Surname', 'Age']}
             rows={[
-                [
-                    'Name',
-                    'Surname',
-                    '23',
-                ],
+                ['Name', 'Surname', '23'],
                 ['John', 'Surname', '21'],
                 ['Jim', 'Surname', '23'],
             ]}
         />
+        <Block w='100%' />
     </DashboardLayout>
 </Playground>

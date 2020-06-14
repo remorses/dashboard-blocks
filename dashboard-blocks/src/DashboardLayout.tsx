@@ -42,6 +42,7 @@ export function DashboardLayout({
     pageWidth = '1200px',
     primary = 'green',
     children,
+    spacing='6',
     // background = 'gray.100',
     ...rest
 }: DashboardLayoutProps) {
@@ -103,8 +104,9 @@ export function DashboardLayout({
                         // mr={['none', null, TABLE_OF_C_W + 30 + 'px']}
                     >
                         <Stack
-                            overflow='auto'
+                            overflow='visible'
                             // px={['10px', null, '20px', '30px']}
+                            spacing={spacing}
                             flex='1'
                             minHeight='100%'
                             minW='100%'
@@ -122,7 +124,7 @@ export function SideNav({ items, ...rest }) {
     return (
         <Stack spacing='20px' {...rest}>
             {items.map((x, i) => {
-                return <Box key={i}>x</Box>
+                return <Box key={i}>{x}</Box>
             })}
         </Stack>
     )

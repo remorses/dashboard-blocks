@@ -30,8 +30,8 @@ export const Block = ({
     return (
         <Stack
             position='relative'
-            m='10px'
-            mt='0px'
+            // m='10px'
+            // mt='0px'
             overflow='hidden'
             rounded='6px'
             bg='white'
