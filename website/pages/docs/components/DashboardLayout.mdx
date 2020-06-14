@@ -1,17 +1,18 @@
 # DashboardLayout
 
 import { Playground } from 'dokz'
-import { Stack } from '@chakra-ui/core'
+import { Stack, Box, Image } from '@chakra-ui/core'
 import {
     DashboardLayout,
     Block,
     SideNavLink,
     TableBlock,
+    BannerBlock,
     Breadcrumbs,
     SmartBreadcrumbs,
 } from 'dashboard-blocks/src'
 
-<Playground >
+<Playground>
     <DashboardLayout
         bg='rgba(0,0,0,0.02)'
         p='20px'
@@ -25,6 +26,15 @@ import {
         ]}
     >
         <SmartBreadcrumbs />
+        <BannerBlock
+            heading='Setup Dashboard Blocks'
+            image={<Image h='160px' src='/3946760.svg' />}
+            subheading={
+                <Box>
+                    Let's create your first project<br></br> Follow me to learn more<br></br>
+                </Box>
+            }
+        />
         <Stack spacing='6' direction='row'>
             <Block w='100%' />
             <Block w='100%' />

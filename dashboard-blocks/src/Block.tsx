@@ -18,12 +18,12 @@ import {
 
 export type BlockProps = {
     headingHeight?: any
-    heading?: ReactNode
+    // heading?: ReactNode
 } & StackProps
 
 export const Block = ({
     children,
-    heading = '',
+    // heading = '',
     headingHeight = '2em',
     ...rest
 }: BlockProps) => {
@@ -43,7 +43,7 @@ export const Block = ({
             p='20px'
             {...rest}
         >
-            <Box
+            {/* <Box
                 position='absolute'
                 top='10px'
                 left='0'
@@ -56,10 +56,12 @@ export const Block = ({
                 isTruncated
             >
                 {heading}
-            </Box>
-            <Box width='100%' mt={headingHeight}>
+            </Box> */}
+
+            {children}
+            {/* <Box width='100%' mt={headingHeight}>
                 {children}
-            </Box>
+            </Box> */}
         </Stack>
     )
 }

@@ -1,0 +1,25 @@
+# BannerBlock
+
+import { Playground } from 'dokz'
+import { Stack, Box, Image } from '@chakra-ui/core'
+import {
+    DashboardLayout,
+    Block,
+    TableBlock,
+    BannerBlock,
+} from 'dashboard-blocks/src'
+
+<Playground>
+    <DashboardLayout p='20px'>
+        <BannerBlock
+            heading='Setup Dashboard Blocks'
+            image={<Image h='160px' src='/3946760.svg' />}
+            subheading={
+                <Box>
+                    Let's create your first project<br></br> Follow me to learn more
+                    <br></br>
+                </Box>
+            }
+        />
+    </DashboardLayout>
+</Playground>
