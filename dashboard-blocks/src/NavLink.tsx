@@ -77,7 +77,7 @@ export const SideNavLink: FC<NavLinkProps> = forwardRef(
         const activeColor = { light: 'gray.800', dark: 'gray.200' }
         const activeBg = {
             light: 'rgba(0,0,0,0.04)',
-            dark: 'rgba(255,255,255,0.04)',
+            dark: 'gray.700',
         }
 
         const activeStyles = {

@@ -36,6 +36,7 @@ export const TableBlock = ({
             p='0px'
             overflowX='auto'
             direction='row'
+            fontWeight='medium'
             {...rest}
         >
             <Box as='table' textAlign='left' width='full'>

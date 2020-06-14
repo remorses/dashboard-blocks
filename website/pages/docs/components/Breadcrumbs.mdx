@@ -10,7 +10,7 @@ import {
 } from 'dashboard-blocks/src'
 
 <Playground iframe={false}>
-    <DashboardLayout bg='gray.50' p='20px'>
+    <DashboardLayout p='20px'>
         <Breadcrumbs items={['User', 'Morse', 'Services']} />
     </DashboardLayout>
 </Playground>
@@ -18,7 +18,7 @@ import {
 The smart breadcrumbs infer the breadcrumbs from the current url, you can pass a `basePath` to remove paths that come before that
 
 <Playground iframe={false}>
-    <DashboardLayout bg='gray.50' p='20px'>
+    <DashboardLayout p='20px'>
         <SmartBreadcrumbs basePath='/docs' />
     </DashboardLayout>
 </Playground>

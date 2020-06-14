@@ -22,7 +22,8 @@ export default function Page({}) {
         },
     }
     return (
-        <LandingProvider dark minH='100vh' bg='gray.800'>
+        <LandingProvider minH='100vh'>
+            {/* TODO i want to change the background of LandingProvider based on colorMode, i cannot do that without adding a parent colormodeprovider */}
             <NavBar
                 logo={
                     <Box fontSize='30px' fontWeight='medium'>

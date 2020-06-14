@@ -28,7 +28,7 @@ export const Block = ({
     ...rest
 }: BlockProps) => {
     const { colorMode } = useColorMode()
-    const bg = { light: 'white', dark: 'gray.600' }
+    const bg = { light: 'white', dark: 'gray.700' }
     return (
         <Stack
             position='relative'

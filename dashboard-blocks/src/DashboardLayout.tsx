@@ -42,7 +42,7 @@ export function DashboardLayout({
     pageWidth = '1200px',
     primary = 'green',
     children,
-    spacing='6',
+    spacing = '6',
     // background = 'gray.100',
     ...rest
 }: DashboardLayoutProps) {
@@ -76,7 +76,7 @@ export function DashboardLayout({
                 <Stack
                     direction='row'
                     // minHeight='100%'
-                    spacing='20px'
+                    spacing={['20px', null, '60px']}
                     position='relative'
                     w='100%'
                     maxWidth={pageWidth}
