@@ -121,8 +121,8 @@ export function DashboardLayout({
 export function SideNav({ items, ...rest }) {
     return (
         <Stack spacing='20px' {...rest}>
-            {addKeys(items).map((x) => {
-                return x
+            {items.map((x, i) => {
+                return <Box key={i}>x</Box>
             })}
         </Stack>
     )
@@ -168,9 +168,3 @@ const globalStyles = css`
         max-height: 100%;
     } */
 `
-
-const addKeys = (elems) => {
-    return elems.map((x, key) => {
-        return cloneElement(x, { key })
-    })
-}

@@ -1,5 +1,5 @@
 import { useTheme, ThemeProvider } from '@chakra-ui/core'
-import React, { useMemo } from 'react'
+import React, { useMemo, cloneElement } from 'react'
 import merge from 'lodash/fp/merge'
 
 export function PropagatedThemeProvider({ theme, children }) {
@@ -9,4 +9,10 @@ export function PropagatedThemeProvider({ theme, children }) {
         return merge(existingTheme || {}, theme)
     }, [theme, existingTheme])
     return <ThemeProvider theme={merged}>{children}</ThemeProvider>
+}
+
+export const addKeys = (elems) => {
+    return elems.map((x, key) => {
+        return cloneElement(x, { key })
+    })
 }

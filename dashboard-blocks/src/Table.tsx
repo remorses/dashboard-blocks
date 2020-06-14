@@ -16,15 +16,19 @@ import {
     Flex,
     StackProps,
 } from '@chakra-ui/core'
-import { Block } from './Block'
+import { Block, BlockProps } from './Block'
 
 export type TableProps = {
     head?: ReactNode[]
-    heading?: ReactNode
     rows?: ReactNode[][]
-} & StackProps
+} & BlockProps
 
-export const TableBlock = ({ head = [], heading = '', rows = [], ...rest }) => {
+export const TableBlock = ({
+    head = [],
+    heading = '',
+    rows = [],
+    ...rest
+}: TableProps) => {
     return (
         <Block
             heading={heading}
@@ -54,7 +58,7 @@ export const TableBlock = ({ head = [], heading = '', rows = [], ...rest }) => {
     )
 }
 
-const cellPadding= 6
+const cellPadding = 6
 
 const THead = (props) => {
     const { colorMode } = useColorMode()

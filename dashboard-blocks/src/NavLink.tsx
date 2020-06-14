@@ -28,7 +28,7 @@ const useIsActive = (href) => {
     return isActive
 }
 
-export const formatPath = (str) => {
+const formatPath = (str) => {
     return str && str.replace(/\/index$/, '')
 }
 

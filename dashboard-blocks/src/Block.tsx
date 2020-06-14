@@ -13,14 +13,20 @@ import {
     LinkProps,
     Link,
     Stack,
+    StackProps,
 } from '@chakra-ui/core'
+
+export type BlockProps = {
+    headingHeight?: any
+    heading?: ReactNode
+} & StackProps
 
 export const Block = ({
     children,
     heading = '',
     headingHeight = '2em',
     ...rest
-}) => {
+}: BlockProps) => {
     return (
         <Stack
             position='relative'

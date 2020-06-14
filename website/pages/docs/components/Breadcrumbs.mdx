@@ -1,0 +1,12 @@
+# DashboardLayout
+
+import { Playground } from 'dokz'
+import { Stack } from '@chakra-ui/core'
+import { DashboardLayout, Block, Breadcrumbs } from 'dashboard-blocks/src'
+
+<Playground iframe={false}>
+    <DashboardLayout bg='gray.50' p='20px'>
+        <Breadcrumbs fontSize='16px' items={['User', 'Morse', 'Services']} />
+        {/* <Block h='200px' /> */}
+    </DashboardLayout>
+</Playground>
