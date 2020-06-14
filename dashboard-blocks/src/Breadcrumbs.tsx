@@ -17,6 +17,7 @@ import {
     StackProps,
 } from '@chakra-ui/core'
 import { Block } from './Block'
+import { extractPathItems, dummyUrl } from './support'
 
 export type BreadcrumbsProps = {
     items?: ReactNode[]
@@ -44,6 +45,35 @@ export const Breadcrumbs = ({ items = [], ...rest }: BreadcrumbsProps) => {
             })}
         </Stack>
     )
+}
+
+export type SmartBreadcrumbsProps = { basePath?: string } & BreadcrumbsProps
+
+export const SmartBreadcrumbs = ({
+    basePath = '/',
+    ...rest
+}: SmartBreadcrumbsProps) => {
+    const [url] = useState(typeof window == 'undefined' ? dummyUrl : location.href)
+    const path = new URL(url).pathname
+    const baseItems = extractPathItems(basePath)
+    const items: string[] = removeBaseItems(extractPathItems(path), baseItems)
+
+    return <Breadcrumbs items={items} {...rest} />
+}
+
+function removeBaseItems(items, baseItems) {
+    return items.reduce(
+        ({ index, result }, x) => {
+            if (baseItems[index] == x) {
+                return { index: index + 1, result }
+            }
+            return {
+                index: index + 1,
+                result: [...result, x],
+            }
+        },
+        { index: 0, result: [] },
+    ).result
 }
 
 const Divider = (props) => {

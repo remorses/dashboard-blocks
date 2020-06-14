@@ -16,3 +16,12 @@ export const addKeys = (elems) => {
         return cloneElement(x, { key })
     })
 }
+
+export function extractPathItems(path): string[] {
+    return path
+        .split('/')
+        .map((x) => x.trim())
+        .filter(Boolean)
+}
+
+export const dummyUrl = 'http://example.com'

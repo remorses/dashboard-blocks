@@ -8,6 +8,7 @@ import {
     SideNavLink,
     TableBlock,
     Breadcrumbs,
+    SmartBreadcrumbs,
 } from 'dashboard-blocks/src'
 
 <Playground iframe>
@@ -23,7 +24,7 @@ import {
             <SideNavLink href=''>Settings</SideNavLink>,
         ]}
     >
-        <Breadcrumbs fontSize='16px' items={['User', 'Morse', 'Services']} />
+        <SmartBreadcrumbs />
         <Stack spacing='6' direction='row'>
             <Block w='100%' />
             <Block w='100%' />
