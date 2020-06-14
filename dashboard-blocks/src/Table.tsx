@@ -16,32 +16,34 @@ import {
     Flex,
     StackProps,
 } from '@chakra-ui/core'
+import { Block } from './Block'
 
 export type TableProps = {
-    head: ReactNode[]
-    rows: ReactNode[][]
+    head?: ReactNode[]
+    heading?: ReactNode
+    rows?: ReactNode[][]
 } & StackProps
 
-export const Table = ({ head, rows, ...rest }) => {
+export const TableBlock = ({ head = [], heading = '', rows = [], ...rest }) => {
     return (
-        <Stack overflowX='auto' direction='row' {...rest}>
+        <Block heading={heading} headingHeight='0px' p='0px' overflowX='auto' direction='row' {...rest}>
             <Box as='table' textAlign='left' width='full'>
                 <Box as='tr'>
-                    {head.map((name) => {
-                        return <THead>{name}</THead>
+                    {head.map((name, i) => {
+                        return <THead key={i}>{name}</THead>
                     })}
                 </Box>
                 {rows.map((row) => {
                     return (
                         <Box as='tr'>
-                            {row.map((value) => {
-                                return <TData>{value}</TData>
+                            {row.map((value, i) => {
+                                return <TData key={i}>{value}</TData>
                             })}
                         </Box>
                     )
                 })}
             </Box>
-        </Stack>
+        </Block>
     )
 }
 

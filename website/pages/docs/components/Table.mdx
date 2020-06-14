@@ -2,19 +2,19 @@
 
 import { Playground } from 'dokz'
 import { Stack } from '@chakra-ui/core'
-import { DashboardLayout, Block, Table } from 'dashboard-blocks/src'
-
-export const head = ['Name', 'Surname', 'Age']
-export const rows = [
-    ['John Super long title', 'Surname', '23'],
-    ['John', 'Surname', '23'],
-    ['Jim', 'Surname', '23'],
-]
+import { DashboardLayout, Block, TableBlock } from 'dashboard-blocks/src'
 
 <Playground>
     <DashboardLayout bg='gray.50' p='20px'>
-        <Block>
-            <Table head={head} rows={rows} />
-        </Block>
+        <TableBlock
+            head={['Name', 'Surname', 'Age']}
+            rows={[
+                ['John Super long title', 'Surname', '23'],
+                ['John', 'Surname', '21'],
+                ['Jim', 'Surname', '23'],
+            ]}
+        />
     </DashboardLayout>
 </Playground>
+
+
