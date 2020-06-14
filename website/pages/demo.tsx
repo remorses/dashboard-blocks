@@ -38,7 +38,7 @@ export default function Page({}) {
             <DashboardLayout
                 // pt='40px'
 
-                sideNavItems={addKeys([
+                sideNavItems={[
                     <SideNavLink icon={<FiAlertOctagon />} href='/demo'>
                         User
                     </SideNavLink>,
@@ -48,9 +48,9 @@ export default function Page({}) {
                     <SideNavLink icon={<FiAlertOctagon />} href=''>
                         Settings
                     </SideNavLink>,
-                ])}
+                ]}
             >
-                <Flex w='100%' direction='row'>
+                <Flex direction='row'>
                     <Block heading='Chart of something' w='100%'>
                         <Chart
                             options={chartOptions}
@@ -76,12 +76,6 @@ export default function Page({}) {
             />
         </LandingProvider>
     )
-}
-
-const addKeys = (elems) => {
-    return elems.map((x, key) => {
-        return cloneElement(x, { key })
-    })
 }
 
 const data = [30, 40, 45, 50, 49, 60, 70, 91]

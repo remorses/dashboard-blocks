@@ -1,0 +1,22 @@
+# DashboardLayout
+
+import { Playground } from 'dokz'
+import { Stack } from '@chakra-ui/core'
+import { DashboardLayout, Block, SideNavLink } from 'dashboard-blocks/src'
+
+<Playground>
+    <DashboardLayout
+        bg='gray.50'
+        p='20px'
+        sideNavItems={[
+            <SideNavLink href='/docs/components/DashboardLayout'>User</SideNavLink>,
+            <SideNavLink href=''>Projects</SideNavLink>,
+            <SideNavLink href=''>Settings</SideNavLink>,
+        ]}
+    >
+        <Stack direction='row'>
+            <Block w='100%' />
+            <Block w='100%' />
+        </Stack>
+    </DashboardLayout>
+</Playground>

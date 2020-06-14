@@ -76,14 +76,16 @@ export const SideNavLink: FC<NavLinkProps> = forwardRef(
         const hoverColor = { light: 'gray.900', dark: 'whiteAlpha.900' }
         const activeColor = { light: 'gray.800', dark: 'gray.200' }
         const activeBg = {
-            light: 'rgba(0,0,0,0.06)',
-            dark: 'rgba(255,255,255,0.06)',
+            light: 'rgba(0,0,0,0.04)',
+            dark: 'rgba(255,255,255,0.04)',
         }
 
         const activeStyles = {
             bg: activeBg[colorMode],
-            rounded: 'sm',
+            rounded: 'md',
             color: activeColor[colorMode],
+            // shadow: 'sm',
+            // borderWidth: '1px',
             _hover: {},
         }
 

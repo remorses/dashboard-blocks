@@ -1,6 +1,6 @@
 import { css, Global } from '@emotion/core'
 import { SideNavLink } from './NavLink'
-import React, { ReactNode, useMemo, Children } from 'react'
+import React, { ReactNode, useMemo, Children, cloneElement } from 'react'
 import {
     Stack,
     Box,
@@ -121,7 +121,7 @@ export function DashboardLayout({
 export function SideNav({ items, ...rest }) {
     return (
         <Stack spacing='20px' {...rest}>
-            {items.map((x) => {
+            {addKeys(items).map((x) => {
                 return x
             })}
         </Stack>
@@ -168,3 +168,9 @@ const globalStyles = css`
         max-height: 100%;
     } */
 `
+
+const addKeys = (elems) => {
+    return elems.map((x, key) => {
+        return cloneElement(x, { key })
+    })
+}
