@@ -1,5 +1,5 @@
 import Stack from '@chakra-ui/core/dist/Stack'
-import {FiActivity, FiAlertOctagon} from 'react-icons/fi'
+import { FiActivity, FiAlertOctagon } from 'react-icons/fi'
 import {
     DashboardLayout,
     SideNavLink,
@@ -9,7 +9,7 @@ import {
 import { cloneElement } from 'react'
 import { Box, ThemeProvider, Link, Flex } from '@chakra-ui/core'
 import dynamic from 'next/dynamic'
-import { LandingProvider, NavBar } from 'landing-blocks/src'
+import { LandingProvider, NavBar, Footer } from 'landing-blocks/src'
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
 export default function Page({}) {
@@ -22,7 +22,7 @@ export default function Page({}) {
         },
     }
     return (
-        <LandingProvider bg='gray.100'>
+        <LandingProvider minH='100vh' bg='gray.100'>
             <NavBar
                 logo={
                     <Box fontSize='30px' fontWeight='medium'>
@@ -42,10 +42,10 @@ export default function Page({}) {
                     <SideNavLink icon={<FiAlertOctagon />} href='/demo'>
                         User
                     </SideNavLink>,
-                    <SideNavLink icon={<FiActivity/>} href=''>
+                    <SideNavLink icon={<FiActivity />} href=''>
                         Projects
                     </SideNavLink>,
-                    <SideNavLink icon={<FiAlertOctagon/>} href=''>
+                    <SideNavLink icon={<FiAlertOctagon />} href=''>
                         Settings
                     </SideNavLink>,
                 ])}
@@ -67,6 +67,13 @@ export default function Page({}) {
                     </Block>
                 </Flex>
             </DashboardLayout>
+            <Box flex='1' />
+            <Footer
+                columns={{
+                    Product: [<Link>ciao</Link>, <Link>hello</Link>],
+                    Myself: [<Link>ciao</Link>, <Link>hello</Link>],
+                }}
+            />
         </LandingProvider>
     )
 }

@@ -13,7 +13,7 @@ import { PropagatedThemeProvider } from './support'
 import merge from 'lodash/fp/merge'
 
 export type DashboardLayoutProps = {
-    sideNavItems: ReactNode[]
+    sideNavItems?: ReactNode[]
     pageWidth?: any
     primary?: string
     children?: any
@@ -37,10 +37,8 @@ export interface ThemeExtension extends ITheme {
     } & ITheme['fontSizes']
 }
 
-const SIDENAV_W = 260
-
 export function DashboardLayout({
-    sideNavItems,
+    sideNavItems = [],
     pageWidth = '1200px',
     primary = 'green',
     children,
@@ -77,23 +75,26 @@ export function DashboardLayout({
                 <Stack
                     direction='row'
                     // minHeight='100%'
+                    spacing='20px'
                     position='relative'
                     w='100%'
                     maxWidth={pageWidth}
                     // px='20px' // TODO add px as landing blocks
                 >
-                    <SideNav
-                        h='100%'
-                        // maxW='200px'
-                        items={sideNavItems}
-                        alignSelf='flex-start'
-                        // position='fixed'
-                        // left={0}
-                        width={SIDENAV_W}
-                        display={['none', null, 'block']}
-                        overflowY='auto'
-                        overflowX='hidden'
-                    />
+                    {sideNavItems && !!sideNavItems.length && (
+                        <SideNav
+                            h='100%'
+                            // maxW='200px'
+                            items={sideNavItems}
+                            alignSelf='flex-start'
+                            // position='fixed'
+                            // left={0}
+                            width='260px'
+                            display={['none', null, 'block']}
+                            overflowY='auto'
+                            overflowX='hidden'
+                        />
+                    )}
                     <Stack
                         w='100%'
                         direction='row'
@@ -134,16 +135,16 @@ const globalStyles = css`
     html {
         overflow: hidden;
         min-height: 100%;
-        height: 100%;
+        /* height: 100%; */
         scroll-behavior: smooth;
     }
     #__next {
-        min-height: 100%;
-        height: 100%;
+        min-height: 100vh !important;
+        /* height: 100%; */
     }
     body {
         min-height: 100%;
-        height: 100%;
+        /* height: 100%; */
         overflow: auto;
         overflow-x: hidden;
         scroll-behavior: smooth;
