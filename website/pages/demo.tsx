@@ -22,7 +22,7 @@ export default function Page({}) {
         },
     }
     return (
-        <LandingProvider minH='100vh' bg='gray.100'>
+        <LandingProvider dark minH='100vh' bg='gray.800'>
             <NavBar
                 logo={
                     <Box fontSize='30px' fontWeight='medium'>
@@ -50,7 +50,7 @@ export default function Page({}) {
                     </SideNavLink>,
                 ]}
             >
-                <Flex direction='row'>
+                <Stack spacing='6' direction='row'>
                     <Block heading='Chart of something' w='100%'>
                         <Chart
                             options={chartOptions}
@@ -65,7 +65,7 @@ export default function Page({}) {
                             type='bar'
                         />
                     </Block>
-                </Flex>
+                </Stack>
             </DashboardLayout>
             <Box flex='1' />
             <Footer

@@ -27,6 +27,8 @@ export const Block = ({
     headingHeight = '2em',
     ...rest
 }: BlockProps) => {
+    const { colorMode } = useColorMode()
+    const bg = { light: 'white', dark: 'gray.600' }
     return (
         <Stack
             position='relative'
@@ -34,7 +36,7 @@ export const Block = ({
             // mt='0px'
             overflow='hidden'
             rounded='6px'
-            bg='white'
+            bg={bg[colorMode]}
             minH='200px'
             minW='200px'
             shadow='lg'

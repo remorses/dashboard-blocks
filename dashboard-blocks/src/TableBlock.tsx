@@ -61,8 +61,6 @@ export const TableBlock = ({
 const cellPadding = 6
 
 const THead = (props) => {
-    const { colorMode } = useColorMode()
-    const bg = { light: 'gray.50', dark: 'whiteAlpha.100' }
     return (
         <Box
             as='th'
@@ -75,14 +73,19 @@ const THead = (props) => {
     )
 }
 
-const TData = (props) => (
-    <Box
-        as='td'
-        p={cellPadding}
-        borderTopWidth='1px'
-        borderColor='inherit'
-        // fontSize='sm'
-        whiteSpace='normal'
-        {...props}
-    />
-)
+const TData = (props) => {
+    const { colorMode } = useColorMode()
+    const color = { light: 'gray.500', dark: 'white.500' }
+    return (
+        <Box
+            as='td'
+            p={cellPadding}
+            borderTopWidth='1px'
+            borderColor='inherit'
+            color={color[colorMode]}
+            // fontSize='sm'
+            whiteSpace='normal'
+            {...props}
+        />
+    )
+}

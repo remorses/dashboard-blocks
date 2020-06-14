@@ -105,6 +105,7 @@ export function DashboardLayout({
                     >
                         <Stack
                             overflow='visible'
+                            align='stretch'
                             // px={['10px', null, '20px', '30px']}
                             spacing={spacing}
                             flex='1'
