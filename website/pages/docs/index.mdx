@@ -3,32 +3,84 @@ name: Getting started
 ---
 
 import { Playground } from 'dokz'
+import { Stack, Box, Image } from '@chakra-ui/core'
+import {
+    DashboardLayout,
+    Block,
+    SideNavLink,
+    TableBlock,
+    BannerBlock,
+    Breadcrumbs,
+    SmartBreadcrumbs,
+} from 'dashboard-blocks/src'
+import { ResponsiveBar } from '@nivo/bar'
+import { barData as data } from '../../support'
 
-# Main Heading
+# Dashboard Blocks
 
-Officia do eu reprehenderit laborum exercitation eu nisi deserunt aliqua consequat eiusmod.
+Dashboard Blocks is a set of components built to create beautiful dashboards
 
-Duis incididunt fugiat est aliqua deserunt do aliquip laboris in exercitation laboris nulla minim incididunt.
+These components are made with composability and ease of use in mind, you should be able to create a dashboard page in less than 10 minutes and with less than 200 lines of code
 
-## Second Heading
+Do you want to see an example? here is how you build a landing page in 5 minutes
 
-Quis ullamco id duis sit ipsum laborum fugiat occaecat. Commodo aliqua adipisicing non nisi. Dolore aute magna cupidatat qui quis laboris. Irure veniam deserunt veniam ullamco anim pariatur deserunt. Amet commodo aliqua ut fugiat sunt pariatur ullamco cillum duis ipsum amet anim incididunt. Ut esse dolore in ullamco enim sit cillum eu labore consectetur labore sunt.
-
-### Third Heading
-
-Here is some code
-
-```js
-const x = 'fucking'
-console.log('hello ' + x + ' world')
-```
-
-## Using the playground
-
-You can use live react code to display react component with a preview
-
-<Playground>
-    <div style={{ width: 100, height: 100, background: 'lightblue' }}>
-        hello everyone
-    </div>
+<Playground iframe>
+    <DashboardLayout
+        bg='gray.50'
+        p='20px'
+        pb='100px'
+        sideNavItems={[
+            <SideNavLink href='/docs/components/DashboardLayout'>
+                User
+            </SideNavLink>,
+            <SideNavLink href=''>Projects</SideNavLink>,
+            <SideNavLink href=''>Settings</SideNavLink>,
+        ]}
+    >
+        <SmartBreadcrumbs />
+        <BannerBlock
+            heading='Setup Dashboard Blocks'
+            image={<Image h='160px' src='/3946760.svg' />}
+            subheading={
+                <Box>
+                    Let's create your first project<br></br> Follow me to learn more
+                    <br></br>
+                </Box>
+            }
+        />
+        <Stack spacing='6' direction='row'>
+            <Block w='100%' />
+            <Block w='100%' />
+        </Stack>
+        <TableBlock
+            fontSize='16px'
+            head={['Name', 'Surname', 'Age']}
+            rows={[
+                ['Name', 'Surname', '23'],
+                ['John', 'Surname', '21'],
+                ['Jim', 'Surname', '23'],
+            ]}
+        />
+        <Block height='300px' heading='Chart of something' w='100%'>
+            <ResponsiveBar
+                data={data}
+                keys={[
+                    'hot dog',
+                    'burger',
+                    'sandwich',
+                    'kebab',
+                    'fries',
+                    'donut',
+                ]}
+                indexBy='country'
+                padding={0.3}
+                labelSkipWidth={12}
+                labelSkipHeight={12}
+                labelTextColor={{
+                    from: 'color',
+                    modifiers: [['darker', 1.6]],
+                }}
+            />
+        </Block>
+    </DashboardLayout>
 </Playground>
