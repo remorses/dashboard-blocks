@@ -5,12 +5,14 @@ import { Block, BlockProps } from './Block'
 export type BannerProps = {
     heading?: ReactNode
     subheading?: ReactNode
+    cta?: ReactNode
     image?: ReactNode
 } & BlockProps
 
 export const BannerBlock = ({
     heading = '',
     subheading = '',
+    cta = '',
     image = null,
     ...rest
 }: BannerProps) => {
@@ -33,6 +35,7 @@ export const BannerBlock = ({
             <Stack>
                 <Box fontSize='2em'>{heading}</Box>
                 <Box>{subheading}</Box>
+                <Box>{cta}</Box>
             </Stack>
             <Box flex='1' />
             {image && <Stack>{image}</Stack>}
