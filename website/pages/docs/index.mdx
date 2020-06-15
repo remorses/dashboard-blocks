@@ -30,14 +30,14 @@ Do you want to see an example? here is how you build a landing page in 5 minutes
         p='20px'
         pb='100px'
         sideNavItems={[
-            <SideNavLink href='/docs/components/DashboardLayout'>
+            <SideNavLink href='/docs'>
                 User
             </SideNavLink>,
             <SideNavLink href=''>Projects</SideNavLink>,
             <SideNavLink href=''>Settings</SideNavLink>,
         ]}
     >
-        <SmartBreadcrumbs />
+        <Breadcrumbs items={['Users', 'Morse']} />
         <BannerBlock
             heading='Setup Dashboard Blocks'
             image={<Image h='160px' src='/3946760.svg' />}
