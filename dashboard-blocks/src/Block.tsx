@@ -18,15 +18,16 @@ import {
 
 export type BlockProps = {
     headingHeight?: any
-    // heading?: ReactNode
+    heading?: ReactNode
 } & StackProps
 
 export const Block = ({
     children,
-    // heading = '',
-    headingHeight = '2em',
+    heading = '',
+    headingHeight,
     ...rest
 }: BlockProps) => {
+    headingHeight = heading ? '2.4em' : '20px'
     const { colorMode } = useColorMode()
     const bg = { light: 'white', dark: 'gray.700' }
     return (
@@ -41,11 +42,13 @@ export const Block = ({
             minW='200px'
             shadow='lg'
             p='20px'
+            pt={headingHeight}
             {...rest}
         >
-            {/* <Box
+            <Box
                 position='absolute'
-                top='10px'
+                top='0px'
+                pt={heading ? '10px' : '0px'}
                 left='0'
                 right='0'
                 px='20px'
@@ -54,14 +57,12 @@ export const Block = ({
                 fontWeight='medium'
                 w='100%'
                 isTruncated
+                m={0}
             >
                 {heading}
-            </Box> */}
+            </Box>
 
             {children}
-            {/* <Box width='100%' mt={headingHeight}>
-                {children}
-            </Box> */}
         </Stack>
     )
 }

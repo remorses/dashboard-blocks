@@ -31,9 +31,10 @@ export const TableBlock = ({
 }: TableProps) => {
     return (
         <Block
-            heading={heading}
+            // heading={heading}
             headingHeight='0px'
             p='0px'
+            pt='0px'
             overflowX='auto'
             direction='row'
             fontWeight='medium'

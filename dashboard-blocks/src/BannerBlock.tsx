@@ -21,7 +21,7 @@ export const BannerBlock = ({
     const { colorMode } = useColorMode()
     return (
         <Block
-            headingHeight='0px'
+            // headingHeight='20px'
             overflowX='auto'
             direction='row'
             bg={bg[colorMode]}
