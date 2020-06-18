@@ -31,7 +31,7 @@ import { Logo } from './_app'
 export default function Page({}) {
     return (
         <LandingProvider black='#555' primary='#5259CB' minH='100vh'>
-            <NavBar logo={<Logo />} navs={[<Link>Docs</Link>]} />
+            <NavBar logo={<Logo />} navs={[<Link href='/docs'>Docs</Link>]} />
             <Hero
                 heading='Dashboards building blocks'
                 subheading='Build awesome dashboards in minutes'
