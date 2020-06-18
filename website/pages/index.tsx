@@ -81,7 +81,7 @@ export default function Page({}) {
                     navs={[
                         <Link>User</Link>,
                         <Link>Logout</Link>,
-                        <ColorModeSwitch />,
+                        // <ColorModeSwitch />,
                     ]}
                 />
                 <DashboardLayout
