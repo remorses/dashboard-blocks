@@ -42,35 +42,3 @@ export const BannerBlock = ({
         </Block>
     )
 }
-
-const cellPadding = 6
-
-const THead = (props) => {
-    return (
-        <Box
-            as='th'
-            // bg={bg[colorMode]}
-            fontWeight='semibold'
-            p={cellPadding}
-            // fontSize='1.2em'
-            {...props}
-        />
-    )
-}
-
-const TData = (props) => {
-    const { colorMode } = useColorMode()
-    const color = { light: 'gray.500', dark: 'white.500' }
-    return (
-        <Box
-            as='td'
-            p={cellPadding}
-            borderTopWidth='1px'
-            borderColor='inherit'
-            color={color[colorMode]}
-            // fontSize='sm'
-            whiteSpace='normal'
-            {...props}
-        />
-    )
-}

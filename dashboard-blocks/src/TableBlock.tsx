@@ -77,7 +77,7 @@ const THead = (props) => {
 
 const TData = (props) => {
     const { colorMode } = useColorMode()
-    const color = { light: 'gray.500', dark: 'white.500' }
+    const color = { light: 'gray.600', dark: 'white.500' }
     return (
         <Box
             as='td'

@@ -40,7 +40,7 @@ export const Block = ({
             bg={bg[colorMode]}
             minH='200px'
             minW='200px'
-            shadow='lg'
+            shadow='md'
             p='20px'
             pt={headingHeight}
             {...rest}

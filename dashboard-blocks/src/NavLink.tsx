@@ -59,7 +59,7 @@ export const NavLink: FC<NavLinkProps> = forwardRef(
                 {...props}
             >
                 {icon && (
-                    <Flex align='center' justify='center' w='2em' h='1.6em'>
+                    <Flex align='center' justify='center' fontSize='1.3em' w='2em' h='2em'>
                         {icon}
                     </Flex>
                 )}
@@ -75,7 +75,7 @@ export const SideNavLink: FC<NavLinkProps> = forwardRef(
         const isActive = useIsActive(href)
         const hoverColor = { light: 'gray.900', dark: 'whiteAlpha.900' }
         const activeColor = { light: 'gray.800', dark: 'gray.200' }
-        const idleColor = { light: 'gray.500', dark: 'gray.400' }
+        const idleColor = { light: 'gray.600', dark: 'gray.400' }
         const activeBg = {
             light: 'gray.100',
             dark: 'gray.700',

@@ -25,7 +25,7 @@ export type BreadcrumbsProps = {
 
 export const Breadcrumbs = ({ items = [], ...rest }: BreadcrumbsProps) => {
     const { colorMode } = useColorMode()
-    const color = { light: 'gray.500', dark: 'gray.400' }
+    const color = { light: 'gray.600', dark: 'gray.400' }
     return (
         <Stack
             color={color[colorMode]}
