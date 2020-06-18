@@ -71,7 +71,6 @@ export default function Page({}) {
                                 from: 'color',
                                 modifiers: [['darker', 1.6]],
                             }}
-                            
                         />
                     </Block>
                 </Stack>
