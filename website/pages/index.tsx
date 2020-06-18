@@ -26,18 +26,12 @@ import {
 } from 'landing-blocks/src'
 import { ResponsiveBar } from '@nivo/bar'
 import { barData as data } from '../support'
+import { Logo } from './_app'
 
 export default function Page({}) {
     return (
         <LandingProvider black='#555' primary='#5259CB' minH='100vh'>
-            <NavBar
-                logo={
-                    <Box fontSize='30px' fontWeight='medium'>
-                        dashboard blocks
-                    </Box>
-                }
-                navs={[<Link>Docs</Link>]}
-            />
+            <NavBar logo={<Logo />} navs={[<Link>Docs</Link>]} />
             <Hero
                 heading='Dashboards building blocks'
                 subheading='Build awesome dashboards in minutes'
