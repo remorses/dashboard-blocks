@@ -41,20 +41,24 @@ export const TableBlock = ({
             {...rest}
         >
             <Box as='table' textAlign='left' width='full'>
-                <Box as='tr'>
-                    {head.map((name, i) => {
-                        return <THead key={i}>{name}</THead>
+                <Box as='thead'>
+                    <Box as='tr'>
+                        {head.map((name, i) => {
+                            return <THead key={i}>{name}</THead>
+                        })}
+                    </Box>
+                </Box>
+                <Box as='tbody'>
+                    {rows.map((row) => {
+                        return (
+                            <Box as='tr'>
+                                {row.map((value, i) => {
+                                    return <TData key={i}>{value}</TData>
+                                })}
+                            </Box>
+                        )
                     })}
                 </Box>
-                {rows.map((row) => {
-                    return (
-                        <Box as='tr'>
-                            {row.map((value, i) => {
-                                return <TData key={i}>{value}</TData>
-                            })}
-                        </Box>
-                    )
-                })}
             </Box>
         </Block>
     )
