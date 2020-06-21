@@ -35,17 +35,12 @@ export const NonIdealState = ({
     return (
         <Stack
             position='relative'
-            // m='10px'
-            // mt='0px'
             overflow='hidden'
             spacing='4'
             align='center'
             rounded='6px'
-            // bg={bg[colorMode]}
-            // minH='200px'
             minW='200px'
             textAlign='center'
-            // shadow='md'
             p='20px'
             {...rest}
         >

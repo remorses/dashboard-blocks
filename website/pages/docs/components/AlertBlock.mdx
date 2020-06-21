@@ -1,0 +1,33 @@
+# AlertBlock
+
+import { Playground } from 'dokz'
+import { Stack, Box, Image } from '@chakra-ui/core'
+import {
+    DashboardLayout,
+    Block,
+    TableBlock,
+    AlertBlock,
+} from 'dashboard-blocks/src'
+import InfoIcon from '../../../public/prisma/InfoIcon.svg'
+
+Useful to show some eye catching alert to the user
+
+<Playground>
+    <DashboardLayout p='6'>
+        <AlertBlock
+            status='warning'
+            heading='You still have to verify your email'
+            body='We sent you an email with a link you can click'
+        />
+    </DashboardLayout>
+</Playground>
+
+<Playground>
+    <DashboardLayout p='6'>
+        <AlertBlock
+            status='error'
+            heading='You still have to verify your email'
+            body='We sent you an email with a link you can click'
+        />
+    </DashboardLayout>
+</Playground>

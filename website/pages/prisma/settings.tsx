@@ -9,6 +9,7 @@ import {
     SideNavLink,
     TableBlock,
     TextWithIcon,
+    AlertBlock,
 } from 'dashboard-blocks/src'
 import {
     LandingProvider,
@@ -48,7 +49,7 @@ export default function Page({}) {
 
             <DashboardLayout
                 // pt='40px'
-                spacing='20'
+                spacing='12'
                 sideNavItems={[
                     <SideNavLink
                         icon={<Box size='1em' as={ServicesIcon} />}
@@ -70,6 +71,11 @@ export default function Page({}) {
                     </SideNavLink>,
                 ]}
             >
+                <AlertBlock
+                    status='warning'
+                    heading='You still have to verify your email'
+                    body='We sent you an email with a link you can click'
+                />
                 <Stack spacing='6' align='stretch'>
                     <TextWithIcon
                         fontWeight='medium'

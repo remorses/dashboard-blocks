@@ -4,8 +4,8 @@ import merge from 'lodash/fp/merge'
 
 export function PropagatedThemeProvider({ theme, children }) {
     const existingTheme = useTheme()
-    console.log({ existingTheme: existingTheme.colors })
-    console.log({ new: theme.colors })
+    // console.log({ existingTheme: existingTheme.colors })
+    // console.log({ new: theme.colors })
     const merged = useMemo(() => {
         return merge(existingTheme || {}, theme)
     }, [theme, existingTheme])
