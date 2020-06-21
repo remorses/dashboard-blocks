@@ -89,6 +89,8 @@ export function DashboardLayout({
                         <SideNav
                             h='100%'
                             // maxW='200px'
+                            letterSpacing='0.06em'
+                            // fontSize='1.1em'
                             items={sideNavItems}
                             alignSelf='flex-start'
                             // position='fixed'
