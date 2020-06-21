@@ -29,7 +29,7 @@ export const TextWithIcon = ({
     const { colorMode } = useColorMode()
     const bg = { light: 'white', dark: 'gray.700' }
     return (
-        <Stack spacing='1em' direction='row' align='center' justify='flex-start' {...rest}>
+        <Stack spacing='0.6em' direction='row' align='center' justify='flex-start' {...rest}>
             {icon && <Box>{icon}</Box>}
             <Box>{children}</Box>
         </Stack>

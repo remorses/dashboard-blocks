@@ -49,7 +49,7 @@ export const NavLink: FC<NavLinkProps> = forwardRef(
                 cursor='pointer'
                 alignItems='center'
                 // px='2'
-                py='1'
+                // py='1'
                 transition='all 0.2s'
                 // fontWeight='medium'
                 outline='none'
@@ -63,8 +63,8 @@ export const NavLink: FC<NavLinkProps> = forwardRef(
                         align='stretch'
                         justify='center'
                         fontSize='1.3em'
-                        w='2em'
-                        h='2em'
+                        // w='2em'
+                        // h='2em'
                     >
                         {icon}
                     </Stack>

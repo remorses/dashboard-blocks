@@ -8,6 +8,7 @@ import {
     theme as chakraTheme,
     CSSReset,
     StackProps,
+    Select,
 } from '@chakra-ui/core'
 import { PropagatedThemeProvider } from './support'
 import merge from 'lodash/fp/merge'
@@ -18,6 +19,7 @@ const DEFAULT_PAGE_WIDTH = '1200px'
 export type DashboardLayoutProps = {
     sideNavItems?: ReactNode[]
     pageWidth?: any
+    pagePadding?: any
     primary?: string
     children?: any
 } & StackProps
@@ -45,6 +47,7 @@ export function DashboardLayout({
     pageWidth,
     primary,
     children,
+    pagePadding = '20px', // TODO inherit pagePadding from landingBlocks, checking current theme
     spacing = '6',
     // background = 'gray.100',
     ...rest
@@ -57,7 +60,10 @@ export function DashboardLayout({
                     primary: primary || DEFAULT_PRIMARY,
                 },
                 sizes: {
-                    pageWidth: pageWidth || DEFAULT_PAGE_WIDTH,
+                    pageWidth: pageWidth || DEFAULT_PAGE_WIDTH, // TODO try to take pageWidth from existing theme first
+                },
+                space: {
+                    pagePadding,
                 },
             }),
         [pageWidth, primary],
@@ -69,14 +75,23 @@ export function DashboardLayout({
             <Stack
                 // bg='gray.100'
                 // minHeight='100%'
+                spacing='8'
                 align='center'
                 // color={bodyColor[colorMode]}
                 // fontSize={fontSize}
                 fontWeight='normal'
+                px='pagePadding'
                 // fontFamily='Roboto, Arial'
                 // color={colorMode == 'dark' ? 'white' : black}
                 {...rest}
             >
+                {sideNavItems && !!sideNavItems.length && (
+                    <MobileSideNav
+                        w='100%'
+                        display={['flex', null, 'none']}
+                        items={sideNavItems}
+                    />
+                )}
                 <Stack
                     direction='row'
                     // minHeight='100%'
@@ -84,10 +99,10 @@ export function DashboardLayout({
                     position='relative'
                     w='100%'
                     maxWidth='pageWidth'
-                    // px='20px' // TODO add px as landing blocks
                 >
                     {sideNavItems && !!sideNavItems.length && (
                         <SideNav
+                            display={['none', null, 'flex']}
                             h='100%'
                             // maxW='200px'
                             letterSpacing='0.06em'
@@ -97,11 +112,11 @@ export function DashboardLayout({
                             // position='fixed'
                             // left={0}
                             width='260px'
-                            display={['none', null, 'block']}
                             overflowY='auto'
                             overflowX='hidden'
                         />
                     )}
+
                     <Stack
                         w='100%'
                         direction='row'
@@ -129,9 +144,36 @@ export function DashboardLayout({
 
 export function SideNav({ items, ...rest }) {
     return (
-        <Stack spacing='20px' {...rest}>
+        <Stack spacing='6' {...rest}>
             {items.map((x, i) => {
                 return <Box key={i}>{x}</Box>
+            })}
+        </Stack>
+    )
+}
+
+export function MobileSideNav({ items, ...rest }) {
+    return (
+        <Stack
+            h='3em'
+            align='flex-start'
+            direction='row'
+            spacing='10'
+            overflowX='auto'
+            {...rest}
+        >
+            {items.map((x, i) => {
+                return (
+                    <Box
+                        pb='2'
+                        // borderBottomWidth='3px'
+                        // borderBottomColor={'gray.600'}
+                        // borderBottomStyle='solid'
+                        key={i}
+                    >
+                        {x}
+                    </Box>
+                )
             })}
         </Stack>
     )
