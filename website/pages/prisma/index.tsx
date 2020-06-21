@@ -12,13 +12,14 @@ import {
 } from 'dashboard-blocks/src'
 import { LandingProvider, NavBar, Stack, Link } from 'landing-blocks/src'
 import { AiFillApi as Icon2, AiFillApple as Icon1 } from 'react-icons/ai'
-import Logo from '../public/prisma/Logo.svg'
-import SettingsIcon from '../public/prisma/SettingsIcon.svg'
-import InfoIcon from '../public/prisma/InfoIcon.svg'
-import ServicesIcon from '../public/prisma/ServicesIcon.svg'
-import ServerIcon from '../public/prisma/ServersIcon.svg'
-import GearIcon from '../public/prisma/GearIcon.svg'
-import { barData as data } from '../support'
+import Logo from '../../public/prisma/Logo.svg'
+import SettingsIcon from '../../public/prisma/SettingsIcon.svg'
+import InfoIcon from '../../public/prisma/InfoIcon.svg'
+
+import ServicesIcon from '../../public/prisma/ServicesIcon.svg'
+import ServerIcon from '../../public/prisma/ServersIcon.svg'
+import GearIcon from '../../public/prisma/GearIcon.svg'
+import { barData as data } from '../../support'
 
 const BG = '#ECF1F3'
 
@@ -51,11 +52,14 @@ export default function Page({}) {
                     </SideNavLink>,
                     <SideNavLink
                         icon={<Box size='1em' as={ServerIcon} />}
-                        href=''
+                        href='/prisma/servers'
                     >
                         Servers
                     </SideNavLink>,
-                    <SideNavLink icon={<Box size='1em' as={SettingsIcon} />}>
+                    <SideNavLink
+                        href='/prisma/settings'
+                        icon={<Box size='1em' as={SettingsIcon} />}
+                    >
                         Settings
                     </SideNavLink>,
                 ]}

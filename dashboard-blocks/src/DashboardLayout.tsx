@@ -12,6 +12,9 @@ import {
 import { PropagatedThemeProvider } from './support'
 import merge from 'lodash/fp/merge'
 
+const DEFAULT_PRIMARY = '#00B66D'
+const DEFAULT_PAGE_WIDTH = '1200px'
+
 export type DashboardLayoutProps = {
     sideNavItems?: ReactNode[]
     pageWidth?: any
@@ -39,8 +42,8 @@ export interface ThemeExtension extends ITheme {
 
 export function DashboardLayout({
     sideNavItems = [],
-    pageWidth = '1200px',
-    primary = 'green',
+    pageWidth,
+    primary,
     children,
     spacing = '6',
     // background = 'gray.100',
@@ -50,10 +53,10 @@ export function DashboardLayout({
         () =>
             merge(chakraTheme, {
                 colors: {
-                    primary,
+                    primary: primary || DEFAULT_PRIMARY,
                 },
                 sizes: {
-                    pageWidth,
+                    pageWidth: pageWidth || DEFAULT_PAGE_WIDTH,
                 },
             }),
         [pageWidth, primary],
@@ -79,7 +82,7 @@ export function DashboardLayout({
                     spacing={['20px', null, '60px']}
                     position='relative'
                     w='100%'
-                    maxWidth={pageWidth}
+                    maxWidth='pageWidth'
                     // px='20px' // TODO add px as landing blocks
                 >
                     {sideNavItems && !!sideNavItems.length && (
