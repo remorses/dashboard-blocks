@@ -72,7 +72,7 @@ export default function Page({}) {
                     >
                         Services
                     </TextWithIcon>
-                    <Box flex='1' />
+                    <Box minW='4' flex='1' />
                     <a href=''>
                         <TextWithIcon
                             opacity={0.6}
@@ -95,20 +95,18 @@ export default function Page({}) {
                         [
                             'demo',
                             'prisma-eq1',
-                            <Stack
-                                w='auto'
-                                align='center'
-                                spacing='2'
-                                direction='row'
-                                flexWrap='wrap'
+
+                            <TextWithIcon
+                                icon={
+                                    <Box
+                                        size='.5em'
+                                        bg='green.400'
+                                        rounded='100%'
+                                    />
+                                }
                             >
-                                <Box
-                                    size='.5em'
-                                    bg='green.400'
-                                    rounded='100%'
-                                />
-                                <Box>Healthy</Box>
-                            </Stack>,
+                                Healthy
+                            </TextWithIcon>,
                             0,
                             <Link href='#'>
                                 <Box opacity={0.5} as={GearIcon} size='1em' />
