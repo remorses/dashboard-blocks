@@ -1,20 +1,18 @@
-import { Avatar, Box, Divider, Input } from '@chakra-ui/core'
+import { Avatar, Box } from '@chakra-ui/core'
 import {
-    Block,
     DashboardLayout,
-    SideNavLink,
-    TextWithIcon,
-    NonIdealState,
+
+
+    NonIdealState, SideNavLink,
+    TextWithIcon
 } from 'dashboard-blocks/src'
 import {
     Button,
     LandingProvider,
     Link,
-    NavBar,
-    Stack,
+    NavBar
 } from 'landing-blocks/src'
-import { FiSearch, FiAlertOctagon } from 'react-icons/fi'
-import FolderIcon from '../../public/prisma/FolderIcon.svg'
+import { FiAlertOctagon } from 'react-icons/fi'
 import Logo from '../../public/prisma/Logo.svg'
 import ServerIcon from '../../public/prisma/ServersIcon.svg'
 import ServicesIcon from '../../public/prisma/ServicesIcon.svg'

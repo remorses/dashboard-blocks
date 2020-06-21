@@ -52,6 +52,7 @@ export function DashboardLayout({
     const theme = useMemo(
         () =>
             merge(chakraTheme, {
+                // TODO chakra overrides the black and white color
                 colors: {
                     primary: primary || DEFAULT_PRIMARY,
                 },
