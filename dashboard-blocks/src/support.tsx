@@ -12,12 +12,6 @@ export function PropagatedThemeProvider({ theme, children }) {
     return <ThemeProvider theme={merged}>{children}</ThemeProvider>
 }
 
-export const addKeys = (elems) => {
-    return elems.map((x, key) => {
-        return cloneElement(x, { key })
-    })
-}
-
 export function extractPathItems(path): string[] {
     return path
         .split('/')
