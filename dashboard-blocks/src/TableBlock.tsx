@@ -67,8 +67,9 @@ const THead = (props) => {
         <Box
             as='th'
             // bg={bg[colorMode]}
-            fontWeight='semibold'
-            p={cellPadding}
+            fontWeight='medium'
+            py={cellPadding / 2}
+            px={cellPadding}
             // fontSize='1.2em'
             {...props}
         />
@@ -83,6 +84,7 @@ const TData = (props) => {
             as='td'
             p={cellPadding}
             borderTopWidth='1px'
+            fontWeight='normal'
             borderColor='inherit'
             color={color[colorMode]}
             // fontSize='sm'

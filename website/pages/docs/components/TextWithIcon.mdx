@@ -1,0 +1,26 @@
+# TextWithIcon
+
+import { Playground } from 'dokz'
+import { Stack, Box, Image } from '@chakra-ui/core'
+import {
+    DashboardLayout,
+    Block,
+    TableBlock,
+    TextWithIcon,
+} from 'dashboard-blocks/src'
+import InfoIcon from '../../../public/prisma/InfoIcon.svg'
+
+Useful for links that have an icon or helper labels under some complex form
+
+<Playground>
+    <DashboardLayout p='6'>
+        <a href=''>
+            <TextWithIcon
+                opacity={0.6}
+                icon={<Box as={InfoIcon} size='1.2em' />}
+            >
+                How to deploy a new service?
+            </TextWithIcon>
+        </a>
+    </DashboardLayout>
+</Playground>

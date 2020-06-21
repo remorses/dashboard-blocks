@@ -48,7 +48,7 @@ export const NavLink: FC<NavLinkProps> = forwardRef(
                 display='flex'
                 cursor='pointer'
                 alignItems='center'
-                px='2'
+                // px='2'
                 py='1'
                 transition='all 0.2s'
                 // fontWeight='medium'
@@ -59,9 +59,15 @@ export const NavLink: FC<NavLinkProps> = forwardRef(
                 {...props}
             >
                 {icon && (
-                    <Flex align='center' justify='center' fontSize='1.3em' w='2em' h='2em'>
+                    <Stack
+                        align='stretch'
+                        justify='center'
+                        fontSize='1.3em'
+                        w='2em'
+                        h='2em'
+                    >
                         {icon}
-                    </Flex>
+                    </Stack>
                 )}
                 <Box>{children}</Box>
             </Stack>

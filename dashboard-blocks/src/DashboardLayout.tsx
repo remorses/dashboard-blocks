@@ -110,7 +110,7 @@ export function DashboardLayout({
                             spacing={spacing}
                             flex='1'
                             minHeight='100%'
-                            minW='100%'
+                            minWidth='100%'
                         >
                             {children}
                         </Stack>
