@@ -1,0 +1,31 @@
+# NonIdealState
+
+import { Playground } from 'dokz'
+import { Stack, Box, Image, Button } from '@chakra-ui/core'
+import {
+    DashboardLayout,
+    Block,
+    TableBlock,
+    NonIdealState,
+} from 'dashboard-blocks/src'
+import InfoIcon from '../../../public/prisma/InfoIcon.svg'
+import { FiSearch, FiAlertOctagon } from 'react-icons/fi'
+
+This component lets you quickly show some visual feedback for non ideal states.
+
+Non-ideal UI states inform the user that some content is unavailable. There are several types of non-ideal states, including:
+
+-   **Empty state**: a container has just been created and has no data in it yet, or a container's contents have been intentionally removed.
+-   **Loading state**: a container is awaiting data. A good practice is to show a spinner for this state, with optional explanatory text below the spinner.
+-   **Error state**: something went wrong (for instance, 404 and 500 HTTP errors). In this case, a good practice is to add a call to action directing the user what to do next.
+
+<Playground>
+    <DashboardLayout p='6'>
+        <NonIdealState
+            icon={<Box opacity={.8} as={FiAlertOctagon} />}
+            heading='You still have no servers'
+            body='Servers are necessary to host services'
+            cta={<Button size='sm'>Create a server</Button>}
+        />
+    </DashboardLayout>
+</Playground>
