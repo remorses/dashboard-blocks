@@ -24,7 +24,7 @@ import { Faded } from 'baby-i-am-faded'
 
 const BG = '#ECF1F3'
 
-export default function Page({}) {
+export default function PrismaPage({}) {
     return (
         <LandingProvider
             // spacing='6'
