@@ -77,7 +77,7 @@ export default function Page({}) {
                     <Box minW='4' flex='1' />
                     <a href=''>
                         <TextWithIcon
-                            opacity={0.6}
+                            opacity={0.8}
                             icon={<Box as={InfoIcon} size='1.4em' />}
                         >
                             How to deploy a new service?
