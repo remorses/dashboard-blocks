@@ -88,7 +88,7 @@ export function DashboardLayout({
                 px='pagePadding'
                 // fontFamily='Roboto, Arial'
                 // color={colorMode == 'dark' ? 'white' : black}
-                
+
                 {...rest}
             >
                 {sideNavItems && !!sideNavItems.length && (
@@ -168,6 +168,7 @@ export function SideNav({ items, ...rest }) {
 export function MobileSideNav({ items, ...rest }) {
     return (
         <Stack
+            as={Faded}
             h='3em'
             align='flex-start'
             direction='row'
