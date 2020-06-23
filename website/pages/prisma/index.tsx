@@ -67,11 +67,12 @@ export default function Page({}) {
             >
                 <Stack direction='row' align='center'>
                     <TextWithIcon
+                        fontSize='1.2em'
                         fontWeight='medium'
                         // fontSize=
-                        icon={<Box as={ServicesIcon} size='1.4em' />}
+                        // icon={<Box as={ServicesIcon} size='1.4em' />}
                     >
-                        Services
+                        Your Services
                     </TextWithIcon>
                     <Box minW='4' flex='1' />
                     <a href=''>
