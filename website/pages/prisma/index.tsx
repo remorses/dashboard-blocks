@@ -45,14 +45,14 @@ export default function Page({}) {
             <DashboardLayout
                 // pt='40px'
                 sideNavItems={[
-                    <NextLink href='/prisma'>
+                    <NextLink passHref href='/prisma'>
                         <SideNavLink
                             icon={<Box size='1em' as={ServicesIcon} />}
                         >
                             Services
                         </SideNavLink>
                     </NextLink>,
-                    <NextLink href='/prisma/servers'>
+                    <NextLink passHref href='/prisma/servers'>
                         <SideNavLink icon={<Box size='1em' as={ServerIcon} />}>
                             Servers
                         </SideNavLink>
