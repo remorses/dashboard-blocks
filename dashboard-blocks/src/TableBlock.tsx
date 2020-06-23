@@ -49,9 +49,9 @@ export const TableBlock = ({
                     </Box>
                 </Box>
                 <Box as='tbody'>
-                    {rows.map((row) => {
+                    {rows.map((row, i) => {
                         return (
-                            <Box as='tr'>
+                            <Box key={i} as='tr'>
                                 {row.map((value, i) => {
                                     return <TData key={i}>{value}</TData>
                                 })}

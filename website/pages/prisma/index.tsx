@@ -1,5 +1,5 @@
 import { Box, Image, Avatar } from '@chakra-ui/core'
-
+import NextLink from 'next/link'
 import { ResponsiveBar } from '@nivo/bar'
 import {
     BannerBlock,
@@ -45,18 +45,18 @@ export default function Page({}) {
             <DashboardLayout
                 // pt='40px'
                 sideNavItems={[
-                    <SideNavLink
-                        icon={<Box size='1em' as={ServicesIcon} />}
-                        href='/prisma'
-                    >
-                        Services
-                    </SideNavLink>,
-                    <SideNavLink
-                        icon={<Box size='1em' as={ServerIcon} />}
-                        href='/prisma/servers'
-                    >
-                        Servers
-                    </SideNavLink>,
+                    <NextLink href='/prisma'>
+                        <SideNavLink
+                            icon={<Box size='1em' as={ServicesIcon} />}
+                        >
+                            Services
+                        </SideNavLink>
+                    </NextLink>,
+                    <NextLink href='/prisma/servers'>
+                        <SideNavLink icon={<Box size='1em' as={ServerIcon} />}>
+                            Servers
+                        </SideNavLink>
+                    </NextLink>,
                     <SideNavLink
                         href='/prisma/settings'
                         icon={<Box size='1em' as={SettingsIcon} />}
