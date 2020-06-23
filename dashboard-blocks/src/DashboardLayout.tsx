@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/core'
 import { PropagatedThemeProvider } from './support'
 import merge from 'lodash/fp/merge'
+import { Faded } from 'baby-i-am-faded'
 
 const DEFAULT_PRIMARY = '#00B66D'
 const DEFAULT_PAGE_WIDTH = '1200px'
@@ -40,6 +41,10 @@ export interface ThemeExtension extends ITheme {
         subheading: any
         subtext: any
     } & ITheme['fontSizes']
+}
+
+Faded.defaultProps = {
+    cascade: true,
 }
 
 export function DashboardLayout({
@@ -83,6 +88,7 @@ export function DashboardLayout({
                 px='pagePadding'
                 // fontFamily='Roboto, Arial'
                 // color={colorMode == 'dark' ? 'white' : black}
+                
                 {...rest}
             >
                 {sideNavItems && !!sideNavItems.length && (
@@ -132,6 +138,7 @@ export function DashboardLayout({
                             flex='1'
                             minHeight='100%'
                             minWidth='100%'
+                            as={Faded}
                         >
                             {children}
                         </Stack>
@@ -144,7 +151,13 @@ export function DashboardLayout({
 
 export function SideNav({ items, ...rest }) {
     return (
-        <Stack spacing='6' {...rest}>
+        <Stack
+            as={Faded}
+            // @ts-ignore
+            cascade
+            spacing='6'
+            {...rest}
+        >
             {items.map((x, i) => {
                 return <Box key={i}>{x}</Box>
             })}

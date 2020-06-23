@@ -2473,6 +2473,16 @@ baby-i-am-faded@^0.0.12:
     react-intersection-observer "^8.26.1"
     react-is "^16.13.1"
 
+baby-i-am-faded@^0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/baby-i-am-faded/-/baby-i-am-faded-0.0.14.tgz#a2d28b1fb441eb866ba78184e54a8ec68874e34c"
+  integrity sha512-zHr5dIioKwxU5Blkuxl/1ZBVuebM4+5LRZA77TJRW2Dzy34DFMHtyhiMu/MVmHDCyn4+6F2PuGpA5WtdAS+lLQ==
+  dependencies:
+    "@emotion/serialize" "^0.11.16"
+    "@emotion/styled" "^10.0.27"
+    react-intersection-observer "^8.26.1"
+    react-is "^16.13.1"
+
 bail@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/bail/-/bail-1.0.5.tgz#b6fa133404a392cbc1f8c4bf63f5953351e7a776"

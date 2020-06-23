@@ -20,6 +20,7 @@ import ServicesIcon from '../../public/prisma/ServicesIcon.svg'
 import ServerIcon from '../../public/prisma/ServersIcon.svg'
 import GearIcon from '../../public/prisma/GearIcon.svg'
 import { barData as data } from '../../support'
+import { Faded } from 'baby-i-am-faded'
 
 const BG = '#ECF1F3'
 

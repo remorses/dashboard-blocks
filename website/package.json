@@ -13,6 +13,7 @@
         "@emotion/styled": "^10.0.27",
         "@nivo/bar": "^0.62.0",
         "apexcharts": "^3.19.2",
+        "baby-i-am-faded": "^0.0.14",
         "dashboard-blocks": "*",
         "dokz": "^1.0.36",
         "emotion-theming": "^10.0.27",

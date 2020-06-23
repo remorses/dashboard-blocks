@@ -2,6 +2,7 @@ import { DokzProvider, GithubLink, ColorModeSwitch } from 'dokz/dist'
 import React, { Fragment } from 'react'
 import Head from 'next/head'
 import { Box } from '@chakra-ui/core'
+import { Faded } from 'baby-i-am-faded'
 
 export default function App(props) {
     const { Component, pageProps } = props
