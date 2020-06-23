@@ -27,6 +27,7 @@ const BG = '#ECF1F3'
 export default function Page({}) {
     return (
         <LandingProvider
+            // spacing='6'
             fontWeight='500'
             bg={BG}
             black='#555'
@@ -108,6 +109,26 @@ export default function Page({}) {
                                 }
                             >
                                 Healthy
+                            </TextWithIcon>,
+                            0,
+                            <Link href='#'>
+                                <Box opacity={0.5} as={GearIcon} size='1em' />
+                            </Link>,
+                        ],
+                        [
+                            'demo 2',
+                            'prisma-eq1',
+
+                            <TextWithIcon
+                                icon={
+                                    <Box
+                                        size='.5em'
+                                        bg='gray.400'
+                                        rounded='100%'
+                                    />
+                                }
+                            >
+                                Idle
                             </TextWithIcon>,
                             0,
                             <Link href='#'>
