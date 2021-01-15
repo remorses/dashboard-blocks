@@ -1,20 +1,5 @@
-import React, {
-    useState,
-    forwardRef,
-    cloneElement,
-    useEffect,
-    FC,
-    ReactNode,
-} from 'react'
-import {
-    useColorMode,
-    PseudoBox,
-    Box,
-    LinkProps,
-    Link,
-    Stack,
-    Flex,
-} from '@chakra-ui/core'
+import { Box, LinkProps, Stack, useColorMode } from '@chakra-ui/react'
+import React, { FC, forwardRef, ReactNode, useEffect, useState } from 'react'
 
 const useIsActive = (href) => {
     const [isActive, setIsActive] = useState(false)

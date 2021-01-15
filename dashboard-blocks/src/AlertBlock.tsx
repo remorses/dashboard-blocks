@@ -1,25 +1,12 @@
-import React, {
-    useState,
-    forwardRef,
-    cloneElement,
-    useEffect,
-    FC,
-    ReactNode,
-} from 'react'
 import {
-    useColorMode,
-    PseudoBox,
-    Box,
-    LinkProps,
-    Link,
-    Stack,
-    Flex,
-    StackProps,
     Alert,
     AlertIcon,
     AlertProps,
-} from '@chakra-ui/core'
-import { Block, BlockProps } from './Block'
+    Box,
+    Stack,
+    useColorMode,
+} from '@chakra-ui/react'
+import React, { ReactNode } from 'react'
 
 export type AlertBlockProps = {
     heading?: ReactNode

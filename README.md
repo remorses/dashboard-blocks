@@ -15,7 +15,7 @@
 ## Install
 
 ```sh
-yarn add dashboard-blocks @emotion/core @chakra-ui/core
+yarn add dashboard-blocks framer-motion @emotion/react @chakra-ui/react @emotion/styled
 ```
 
 Features

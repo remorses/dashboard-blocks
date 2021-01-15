@@ -1,18 +1,8 @@
-import { css, Global } from '@emotion/core'
-import { SideNavLink } from './NavLink'
-import React, { ReactNode, useMemo, Children, cloneElement } from 'react'
-import {
-    Stack,
-    Box,
-    ITheme,
-    theme as chakraTheme,
-    CSSReset,
-    StackProps,
-    Select,
-} from '@chakra-ui/core'
-import { PropagatedThemeProvider } from './support'
-import merge from 'lodash/fp/merge'
+import { Box, Stack, StackProps, Theme as ITheme } from '@chakra-ui/react'
+import { css, Global } from '@emotion/react'
 import { Faded } from 'baby-i-am-faded'
+import React, { ReactNode, useMemo } from 'react'
+import { PropagatedThemeProvider } from './support'
 
 const DEFAULT_PRIMARY = '#00B66D'
 const DEFAULT_PAGE_WIDTH = '1200px'
@@ -58,19 +48,18 @@ export function DashboardLayout({
     ...rest
 }: DashboardLayoutProps) {
     const theme = useMemo(
-        () =>
-            merge(chakraTheme, {
-                // TODO chakra overrides the black and white color
-                colors: {
-                    primary: primary || DEFAULT_PRIMARY,
-                },
-                sizes: {
-                    pageWidth: pageWidth || DEFAULT_PAGE_WIDTH, // TODO try to take pageWidth from existing theme first
-                },
-                space: {
-                    pagePadding,
-                },
-            }),
+        () => ({
+            // TODO chakra overrides the black and white color
+            colors: {
+                primary: primary || DEFAULT_PRIMARY,
+            },
+            sizes: {
+                pageWidth: pageWidth || DEFAULT_PAGE_WIDTH, // TODO try to take pageWidth from existing theme first
+            },
+            space: {
+                pagePadding,
+            },
+        }),
         [pageWidth, primary],
     )
     return (

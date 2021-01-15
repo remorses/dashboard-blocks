@@ -9,7 +9,7 @@ import {
 } from '.'
 import { ResponsiveBar } from '@nivo/bar'
 import React from 'react'
-import { Image, Box, Stack } from '@chakra-ui/core'
+import { Image, Box, Stack } from '@chakra-ui/react'
 
 export const Simple = () => (
     <DashboardLayout

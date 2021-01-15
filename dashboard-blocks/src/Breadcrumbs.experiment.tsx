@@ -1,6 +1,5 @@
-import { DashboardLayout, BannerBlock, TableBlock, Breadcrumbs } from '.'
 import React from 'react'
-import { Image, Box } from '@chakra-ui/core'
+import { Breadcrumbs, DashboardLayout } from '.'
 
 export default {
     wrapper: ({ children }) => {

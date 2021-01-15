@@ -1,4 +1,4 @@
-import Stack from '@chakra-ui/core/dist/Stack'
+import Stack from '@chakra-ui/react/dist/Stack'
 import { AiFillApple as Icon1, AiFillApi as Icon2 } from 'react-icons/ai'
 import {
     DashboardLayout,
@@ -10,7 +10,7 @@ import {
     TableBlock,
 } from 'dashboard-blocks/src'
 import { cloneElement } from 'react'
-import { Box, ThemeProvider, Flex, Image } from '@chakra-ui/core'
+import { Box, ThemeProvider, Flex, Image } from '@chakra-ui/react'
 import {
     LandingProvider,
     NavBar,

@@ -1,6 +1,6 @@
-import { useTheme, ThemeProvider } from '@chakra-ui/core'
-import React, { useMemo, cloneElement } from 'react'
+import { ThemeProvider, useTheme } from '@chakra-ui/react'
 import merge from 'lodash/fp/merge'
+import React, { useMemo } from 'react'
 
 export function PropagatedThemeProvider({ theme, children }) {
     const existingTheme = useTheme()

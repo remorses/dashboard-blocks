@@ -1,4 +1,4 @@
-import { Avatar, Box } from '@chakra-ui/core'
+import { Avatar, Box } from '@chakra-ui/react'
 import {
     DashboardLayout,
 
@@ -30,7 +30,7 @@ export default function Page({}) {
             minH='100vh'
         >
             <NavBar
-                logo={<Box size='10' as={Logo} />}
+                logo={<Box boxSize='10' as={Logo} />}
                 navs={[
                     <Link href='/docs'>Docs</Link>,
                     <Link href='/info'>Info</Link>,
@@ -43,20 +43,20 @@ export default function Page({}) {
                 spacing='10'
                 sideNavItems={[
                     <SideNavLink
-                        icon={<Box size='1em' as={ServicesIcon} />}
+                        icon={<Box boxSize='1em' as={ServicesIcon} />}
                         href='/prisma'
                     >
                         Services
                     </SideNavLink>,
                     <SideNavLink
-                        icon={<Box size='1em' as={ServerIcon} />}
+                        icon={<Box boxSize='1em' as={ServerIcon} />}
                         href='/prisma/servers'
                     >
                         Servers
                     </SideNavLink>,
                     <SideNavLink
                         href='/prisma/settings'
-                        icon={<Box size='1em' as={SettingsIcon} />}
+                        icon={<Box boxSize='1em' as={SettingsIcon} />}
                     >
                         Settings
                     </SideNavLink>,

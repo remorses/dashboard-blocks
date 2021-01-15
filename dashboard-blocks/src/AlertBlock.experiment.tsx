@@ -1,7 +1,7 @@
 import { DashboardLayout, AlertBlock } from '.'
 import React from 'react'
 
-import { Button, DarkMode } from '@chakra-ui/core'
+import { Button, DarkMode } from '@chakra-ui/react'
 
 ;`
 ## AlertBlock

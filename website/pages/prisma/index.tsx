@@ -1,4 +1,4 @@
-import { Box, Image, Avatar } from '@chakra-ui/core'
+import { Box, Image, Avatar } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { ResponsiveBar } from '@nivo/bar'
 import {
@@ -35,7 +35,7 @@ export default function PrismaPage({}) {
             minH='100vh'
         >
             <NavBar
-                logo={<Box size='10' as={Logo} />}
+                logo={<Box boxSize='10' as={Logo} />}
                 navs={[
                     <Link href='/docs'>Docs</Link>,
                     <Link href='/info'>Info</Link>,
@@ -48,19 +48,21 @@ export default function PrismaPage({}) {
                 sideNavItems={[
                     <NextLink passHref href='/prisma'>
                         <SideNavLink
-                            icon={<Box size='1em' as={ServicesIcon} />}
+                            icon={<Box boxSize='1em' as={ServicesIcon} />}
                         >
                             Services
                         </SideNavLink>
                     </NextLink>,
                     <NextLink passHref href='/prisma/servers'>
-                        <SideNavLink icon={<Box size='1em' as={ServerIcon} />}>
+                        <SideNavLink
+                            icon={<Box boxSize='1em' as={ServerIcon} />}
+                        >
                             Servers
                         </SideNavLink>
                     </NextLink>,
                     <SideNavLink
                         href='/prisma/settings'
-                        icon={<Box size='1em' as={SettingsIcon} />}
+                        icon={<Box boxSize='1em' as={SettingsIcon} />}
                     >
                         Settings
                     </SideNavLink>,
@@ -79,7 +81,7 @@ export default function PrismaPage({}) {
                     <a href=''>
                         <TextWithIcon
                             opacity={0.8}
-                            icon={<Box as={InfoIcon} size='1.4em' />}
+                            icon={<Box as={InfoIcon} boxSize='1.4em' />}
                         >
                             How to deploy a new service?
                         </TextWithIcon>
@@ -102,7 +104,7 @@ export default function PrismaPage({}) {
                             <TextWithIcon
                                 icon={
                                     <Box
-                                        size='.5em'
+                                        boxSize='.5em'
                                         bg='green.400'
                                         rounded='100%'
                                     />
@@ -122,7 +124,7 @@ export default function PrismaPage({}) {
                             <TextWithIcon
                                 icon={
                                     <Box
-                                        size='.5em'
+                                        boxSize='.5em'
                                         bg='gray.400'
                                         rounded='100%'
                                     />
@@ -132,7 +134,11 @@ export default function PrismaPage({}) {
                             </TextWithIcon>,
                             0,
                             <Link href='#'>
-                                <Box opacity={0.5} as={GearIcon} size='1em' />
+                                <Box
+                                    opacity={0.5}
+                                    as={GearIcon}
+                                    boxSize='1em'
+                                />
                             </Link>,
                         ],
                     ]}

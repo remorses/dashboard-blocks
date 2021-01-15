@@ -1,7 +1,7 @@
 import { DokzProvider, GithubLink, ColorModeSwitch } from 'dokz/dist'
 import React, { Fragment } from 'react'
 import Head from 'next/head'
-import { Box } from '@chakra-ui/core'
+import { Box } from '@chakra-ui/react'
 import { Faded } from 'baby-i-am-faded'
 
 export default function App(props) {
@@ -15,22 +15,24 @@ export default function App(props) {
                     key='google-font-Fira'
                 />
             </Head>
-            <DokzProvider
-                headerLogo={<Logo />}
-                docsRootPath='pages/docs'
-                headerItems={[
-                    <GithubLink
-                        key='0'
-                        url='https://github.com/remorses/dokz'
-                    />,
-                    <ColorModeSwitch key='1' />,
-                ]}
-                sidebarOrdering={{
-                    'index.mdx': true,
-                }}
-            >
-                <Component {...pageProps} />
-            </DokzProvider>
+            <ChakraProvider resetC>
+                <DokzProvider
+                    headerLogo={<Logo />}
+                    docsRootPath='pages/docs'
+                    headerItems={[
+                        <GithubLink
+                            key='0'
+                            url='https://github.com/remorses/dokz'
+                        />,
+                        <ColorModeSwitch key='1' />,
+                    ]}
+                    sidebarOrdering={{
+                        'index.mdx': true,
+                    }}
+                >
+                    <Component {...pageProps} />
+                </DokzProvider>
+            </ChakraProvider>
         </Fragment>
     )
 }

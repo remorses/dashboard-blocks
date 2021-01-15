@@ -1,20 +1,5 @@
-import React, {
-    useState,
-    forwardRef,
-    cloneElement,
-    useEffect,
-    FC,
-    ReactNode,
-} from 'react'
-import {
-    useColorMode,
-    PseudoBox,
-    Box,
-    LinkProps,
-    Link,
-    Stack,
-    StackProps,
-} from '@chakra-ui/core'
+import { Box, Stack, StackProps, useColorMode } from '@chakra-ui/react'
+import React, { ReactNode } from 'react'
 
 export type NonIdealStateProps = {
     heading?: ReactNode

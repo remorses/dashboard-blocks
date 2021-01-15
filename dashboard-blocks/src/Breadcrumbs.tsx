@@ -1,23 +1,6 @@
-import React, {
-    useState,
-    forwardRef,
-    cloneElement,
-    useEffect,
-    FC,
-    ReactNode,
-} from 'react'
-import {
-    useColorMode,
-    PseudoBox,
-    Box,
-    LinkProps,
-    Link,
-    Stack,
-    Flex,
-    StackProps,
-} from '@chakra-ui/core'
-import { Block } from './Block'
-import { extractPathItems, dummyUrl } from './support'
+import { Box, Stack, StackProps, useColorMode } from '@chakra-ui/react'
+import React, { ReactNode, useState } from 'react'
+import { dummyUrl, extractPathItems } from './support'
 
 export type BreadcrumbsProps = {
     items?: ReactNode[]
@@ -38,7 +21,7 @@ export const Breadcrumbs = ({ items = [], ...rest }: BreadcrumbsProps) => {
                     <Stack spacing='10px' direction='row' align='center'>
                         <Box key={i}>{item}</Box>
                         {i !== items.length - 1 && (
-                            <Box size='1em' as={Divider} />
+                            <Box boxSize='1em' as={Divider} />
                         )}
                     </Stack>
                 )
@@ -53,7 +36,9 @@ export const SmartBreadcrumbs = ({
     basePath = '/',
     ...rest
 }: SmartBreadcrumbsProps) => {
-    const [url] = useState(typeof window == 'undefined' ? dummyUrl : location.href)
+    const [url] = useState(
+        typeof window == 'undefined' ? dummyUrl : location.href,
+    )
     const path = new URL(url).pathname
     const baseItems = extractPathItems(basePath)
     const items: string[] = removeBaseItems(extractPathItems(path), baseItems)

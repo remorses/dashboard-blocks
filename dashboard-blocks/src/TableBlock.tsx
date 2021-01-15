@@ -1,21 +1,5 @@
-import React, {
-    useState,
-    forwardRef,
-    cloneElement,
-    useEffect,
-    FC,
-    ReactNode,
-} from 'react'
-import {
-    useColorMode,
-    PseudoBox,
-    Box,
-    LinkProps,
-    Link,
-    Stack,
-    Flex,
-    StackProps,
-} from '@chakra-ui/core'
+import { Box, useColorMode } from '@chakra-ui/react'
+import React, { ReactNode } from 'react'
 import { Block, BlockProps } from './Block'
 
 export type TableProps = {

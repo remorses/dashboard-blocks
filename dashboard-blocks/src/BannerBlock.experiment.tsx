@@ -1,6 +1,6 @@
 import { DashboardLayout, BannerBlock } from '.'
 import React from 'react'
-import { Image, Box } from '@chakra-ui/core'
+import { Image, Box } from '@chakra-ui/react'
 
 export const Simple = () => (
     <DashboardLayout p='6'>

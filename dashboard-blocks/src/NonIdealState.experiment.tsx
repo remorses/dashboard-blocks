@@ -1,7 +1,7 @@
-import { DashboardLayout, AlertBlock, NonIdealState } from '.'
+import { Box, Button } from '@chakra-ui/react'
 import React from 'react'
-import { FiSearch, FiAlertOctagon } from 'react-icons/fi'
-import { Button, DarkMode, Box } from '@chakra-ui/core'
+import { FiAlertOctagon } from 'react-icons/fi'
+import { DashboardLayout, NonIdealState } from '.'
 
 export const Simple = () => (
     <DashboardLayout p='6'>

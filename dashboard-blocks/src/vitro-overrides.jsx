@@ -1,23 +1,9 @@
-import {
-    ThemeProvider,
-    ColorModeProvider,
-    CSSReset,
-    LightMode,
-    DarkMode,
-} from '@chakra-ui/core'
+import { ChakraProvider, DarkMode, LightMode } from '@chakra-ui/react'
 import React from 'react'
 
-// console.log(require.resolve('@chakra-ui/core'))
+// console.log(require.resolve('@chakra-ui/react'))
 
-export function Wrapper({ children, dark }) {
+export function Wrapper({ children, isDark }) {
     // console.log(dark ? 'dark' : 'light')
-    const Mode = dark ? DarkMode : LightMode
-    return (
-        <ColorModeProvider value={dark ? 'dark' : 'light'}>
-            <ThemeProvider>
-                {/* <CSSReset/> */}
-                {children}
-            </ThemeProvider>
-        </ColorModeProvider>
-    )
+    return <ChakraProvider >{children}</ChakraProvider>
 }

@@ -1,4 +1,4 @@
-import { Box, useColorMode, Stack } from '@chakra-ui/core'
+import { Box, useColorMode, Stack } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { Block, BlockProps } from './Block'
 
