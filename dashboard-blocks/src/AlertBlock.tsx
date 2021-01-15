@@ -34,6 +34,7 @@ export const AlertBlock = ({
     ...rest
 }: AlertBlockProps) => {
     const { colorMode } = useColorMode()
+    // console.log(colorMode)
     const bg = { light: 'white', dark: 'gray.700' }
     return (
         <Alert variant='left-accent' rounded='sm' shadow='none' {...rest}>

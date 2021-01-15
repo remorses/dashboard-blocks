@@ -6,5 +6,8 @@
     ],
     "scripts": {
         "dev": "yarn --cwd website dev"
+    },
+    "devDependencies": {
+        "@vitro/cli": "^0.1.6"
     }
 }

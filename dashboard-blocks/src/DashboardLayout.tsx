@@ -76,7 +76,7 @@ export function DashboardLayout({
     return (
         <PropagatedThemeProvider theme={theme}>
             <Global styles={globalStyles} />
-            <CSSReset />
+            {/* <CSSReset /> */}
             <Stack
                 // bg='gray.100'
                 // minHeight='100%'
