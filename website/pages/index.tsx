@@ -1,33 +1,17 @@
-import Stack from '@chakra-ui/react/dist/Stack'
-import { AiFillApple as Icon1, AiFillApi as Icon2 } from 'react-icons/ai'
+import { Box, Stack } from '@chakra-ui/react'
 import {
-    DashboardLayout,
-    SideNavLink,
-    Block,
-    ColorModeSwitch,
-    Breadcrumbs,
-    BannerBlock,
-    TableBlock,
-} from 'dashboard-blocks/src'
-import { cloneElement } from 'react'
-import { Box, ThemeProvider, Flex, Image } from '@chakra-ui/react'
-import {
-    LandingProvider,
-    NavBar,
-    Footer,
-    Hero,
-    SectionTitle,
     Bullet,
     Button,
-    FeaturesList,
     Divider,
-    Section,
+    FeaturesList,
+    Footer,
+    Hero,
+    LandingProvider,
     Link,
+    NavBar,
 } from 'landing-blocks/src'
-import { ResponsiveBar } from '@nivo/bar'
-import { barData as data } from '../support'
-import { Logo } from './_app'
 import PrismaPage from './prisma'
+import { Logo } from './_app'
 
 export default function Page({}) {
     return (

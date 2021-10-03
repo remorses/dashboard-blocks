@@ -114,7 +114,11 @@ export default function PrismaPage({}) {
                             </TextWithIcon>,
                             0,
                             <Link href='#'>
-                                <Box opacity={0.5} as={GearIcon} size='1em' />
+                                <Box
+                                    opacity={0.5}
+                                    as={GearIcon}
+                                    boxSize='1em'
+                                />
                             </Link>,
                         ],
                         [
